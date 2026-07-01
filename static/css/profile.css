@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: #3a2f28;
+    background-color: #faf7f2;
+    margin: 0;
+}
+
+.container1 {
+    min-height: 70vh;
+}
+
+/* Hero */
+.hero {
+    background-image: url("/static/images/banner.png");
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 1rem auto;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn-primary {
+    background-color: #a67c52;
+    border-color: #a67c52;
+    padding: 0.6rem 1.6rem;
+    font-weight: 600;
+}
+
+.hero .btn-primary:hover {
+    background-color: #8a6440;
+    border-color: #8a6440;
+}
+
+/* Contact section */
+.contact-me {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.contact-me h2 {
+    font-weight: 700;
+    color: #a67c52;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 1.5rem auto 4rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form-wrapper .btn-primary {
+    background-color: #a67c52;
+    border-color: #a67c52;
+}
+
+.form-wrapper .btn-primary:hover {
+    background-color: #8a6440;
+    border-color: #8a6440;
+}
+
+/* Footer */
+.my-foot {
+    margin-top: 3rem;
+}
+
+.my-socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0.75rem 0;
+}
+
+.my-socials i {
+    font-size: 1.4rem;
+    color: #4a3b2f;
+    transition: color 0.2s ease;
+}
+
+.my-socials i:hover {
+    color: #a67c52;
+}
