@@ -1,8 +1,22 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_mail import Mail, Message
+from dotenv import load_dotenv
+import os
+
+print(os.getenv("MAIL_USERNAME"))
+load_dotenv()
+
 
 app = Flask(__name__)
 app.secret_key = "change-this-secret-key"  # needed for flash messages
 
+# Flask-Mail Configuration
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+mail = Mail(app)
 
 @app.route("/")
 def home():
@@ -19,22 +33,13 @@ def projects():
     return render_template("projects.html")
 
 
-@app.route("/contact", methods=["GET", "POST"])
-def submit_contact_form():
-    if request.method == "POST":
-        name = request.form.get("name") or request.form.get("first_name", "")
-        email = request.form.get("email", "")
-        message = request.form.get("message", "")
-
-        # For now this just prints to the console.
-        # Later you can wire this up to send an email or save to a database.
-        print(f"New contact form submission:\nName: {name}\nEmail: {email}\nMessage: {message}")
-
-        flash("Thanks for reaching out! I'll get back to you soon.")
-        return redirect(url_for("home"))
-
+@app.route("/contact")
+def contact():
     return render_template("form.html")
 
+@app.route("/skills")
+def skills():
+    return render_template("skills.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

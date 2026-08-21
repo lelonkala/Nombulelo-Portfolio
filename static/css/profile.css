@@ -11,7 +11,7 @@ body {
 
 /* Hero */
 .hero {
-    background-image: url("/static/images/banner.png");
+    background-image: url("/static/images/Designer\ \(5\).png");
     background-size: cover;
     background-position: center;
     padding: 6rem 2rem;
@@ -33,15 +33,15 @@ body {
 }
 
 .hero .btn-primary {
-    background-color: #a67c52;
-    border-color: #a67c52;
+    background-color: #eb79c5;
+    border-color: #eb79c5;
     padding: 0.6rem 1.6rem;
     font-weight: 600;
 }
 
 .hero .btn-primary:hover {
-    background-color: #8a6440;
-    border-color: #8a6440;
+    background-color: #f36cb0;
+    border-color: #f36cb0;
 }
 
 /* Contact section */
@@ -52,7 +52,7 @@ body {
 
 .contact-me h2 {
     font-weight: 700;
-    color: #a67c52;
+    color: #f153c2;
 }
 
 .form-wrapper {
@@ -65,13 +65,13 @@ body {
 }
 
 .form-wrapper .btn-primary {
-    background-color: #a67c52;
-    border-color: #a67c52;
+    background-color: #eb79c5;
+    border-color: #eb79c5;
 }
 
 .form-wrapper .btn-primary:hover {
-    background-color: #8a6440;
-    border-color: #8a6440;
+    background-color: #eb79c5;
+    border-color: #eb79c5;
 }
 
 /* Footer */
@@ -90,10 +90,10 @@ body {
 
 .my-socials i {
     font-size: 1.4rem;
-    color: #4a3b2f;
+    color: #f134c2;
     transition: color 0.2s ease;
 }
 
 .my-socials i:hover {
-    color: #a67c52;
+    color: #ee7fd2;
 }

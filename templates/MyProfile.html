@@ -3,54 +3,23 @@
 {% block title %} Home - My Profile {% endblock %}
 
 {% block content %}
+{# {% include "skills.html"} #}
+
 <div class="hero">
     <h1>Welcome to My Personal Website!</h1>
     <p>Hello! I'm Nombulelo, a Full-stack developer. This is my personal website where you can learn more about my work, interests, and projects. Explore my site to discover my journey, achievements, and what drives me.</p>
     <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More About Me</a>
 </div>
 
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <div class="container mt-4">
-      {% for message in messages %}
-        <div class="alert alert-success text-center">{{ message }}</div>
-      {% endfor %}
-    </div>
-  {% endif %}
-{% endwith %}
 
-<div class="contact-me">
-    <h2>Contact Me</h2>
-    <p>Feel free to get in touch if you'd like to collaborate, ask a question, or just say hi!</p>
-</div>
-<div class="form-wrapper">
-    <form action="{{ url_for('submit_contact_form') }}" method="POST">
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="surname">Surname</label>
-                <input type="text" class="form-control" id="surname" name="surname" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="contact_number">Contact Number</label>
-                <input type="text" class="form-control" id="contact_number" name="contact_number" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+<div class = "contact me form-wrapper">
+<h3>Let's Connect</h3>
+<p>
+    Interested in collaborating, hiring me, or discussing a project?
+    Click the button below to get in touch.
+</p>
+
+    <a type="submit" class="btn btn-primary" href = "https://docs.google.com/forms/d/e/1FAlpQLSee5wBGgYg583Y-L-86ZVNeHsSpBH7ohkgylKMKTK8EyvRajQ/viewform?usp=publish-editor">Contact Me</a>
 </div>
 {% endblock %}
 
