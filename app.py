@@ -3,7 +3,7 @@ from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
 
-print(os.getenv("MAIL_USERNAME"))
+#print(os.getenv("MAIL_USERNAME"))
 load_dotenv()
 
 

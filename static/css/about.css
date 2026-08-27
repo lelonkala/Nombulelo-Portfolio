@@ -8,6 +8,11 @@
     padding: 0 1.5rem;
 }
 
+.profile-picture{
+     align-self: flex-start;
+    
+
+}
 .profile-picture img {
     width: 260px;
     height: 260px;
@@ -15,6 +20,19 @@
     border-radius: 50%;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
     border: 4px solid #fff;
+  
+}
+
+details{
+    margin-top: 0.2rem;
+}
+summary{
+    color: #f153c2;
+    cursor: pointer;
+    font-weight: 600;
+}
+summary:hover {
+    color: #c03b98
 }
 
 .about-text {
@@ -38,47 +56,118 @@
     font-weight: 600;
 }
 
-/* Fun facts */
-#fun-facts {
-    max-width: 1000px;
-    margin: 2rem auto 4rem;
-    padding: 0 1.5rem;
-}
 
-#fun-facts .card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    height: 100%;
-}
-
-#fun-facts .fa-2x {
-    color: #a67c52;
-}
-
-#fun-facts .card-title {
-    font-weight: 700;
-    margin-top: 0.5rem;
-}
-
-/* FUN FACTS letter animation banner */
-.text {
+.timeline-wrapper{
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 0.35rem;
+    padding: 2rem 8% 2rem;
+}
+
+.timeline-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    max-width: 1100px;
+    width: 100%
+}
+
+.timeline-col .heading{
+    width: 100%;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
+.timeline-col .heading i{
+    margin-right: 10px;
+    color: #f153c2;
+}
+.content-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.2rem 1.5rem;
+    margin: 0 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+   transition: transform 0.4s ease,
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+    border-left: 4px solid transparent;
 
-.wrapper {
-    position: relative;
+}
+.content-box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15),
+                0 0 20px rgba(224, 24, 148, 0.37);
+    border-left-color: #f153c2;
 }
 
-.letter {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #a67c52;
+/* Tablet */
+@media (max-width: 1024px) {
+    .profile-picture img {
+        transform: translateY(-10px);
+    }
+    .timeline-row{
+        gap: 2rem;
+    }
+    .timeline-col .heading{
+        font-size: 2rem;
+    }
+    .content-box{
+        margin: 0 1rem 1.5rem;
+    }
+
 }
 
-.shadow {
-    display: none;
+/* Mobile */
+@media (max-width: 768px) {
+    .profile-picture img {
+        width: 220px;
+        height: 220px;
+        transform: translateY(-30px);
+    }
+    .timeline-wrapper{
+        padding: 2rem 1rem;
+    }
+    .timeline-row{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .timeline-col .heading{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .content-box{
+        margin: 0;
+        padding: 1rem;
+    }
+    .content-box .h3{
+        font-size: 1.4rem;
+    }
+    .content-box p{
+        font-size: 0.95rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .profile-picture img {
+        width: 180px;
+        height: 180px;
+        transform: translateY(-40px);
+
+    }
+    .timeline-col .heading{
+        font-size: 1.5rem;
+    }
+    .content-box {
+        padding: 0.9rem;
+    }
+    .content-box h3{
+        font-size: 1.2rem;
+    }
+    .date{
+        font-size: 0.85rem;
+    }
+
 }
