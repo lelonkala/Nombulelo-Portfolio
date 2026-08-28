@@ -1,53 +1,70 @@
 .skills-section {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 2rem;
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 2.5rem;
     background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
-
+.skills-section:hover {
+    transform: translateY(-3px);
+}
 .skills-section h2 {
     text-align: center;
     color: #f153c2;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .skills-title {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #eb79c5;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+.skills-title::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #f153c2;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
 }
 
 .skill {
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.8rem;
 }
 
 .skill span {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 500;
+    display: flex;
+    justify-content: spacebetween;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
 }
 
 .progress {
     width: 100%;
-    background: #f4f4f4;
-    border-radius: 20px;
-    height: 12px;
+    background: #f6f6f6;
+    border-radius: 30px;
+    height: 16px;
     overflow: hidden;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .progress-bar {
-    background: #eb79c5;
+    background: linear-gradient(90deg, #f153c2, #ff89db); 
     height: 100%;
-    border-radius: 20px;
+    border-radius: 30px;
     color: white;
-    font-size: 10px;
+    font-size: 0.75rem;
     text-align: right;
-    padding-right: 8px;
+    padding-right: 10px;
     line-height: 12px;
     transition: width 0.8s ease;
+    animation: fillbar 1.8s ease;
 }
