@@ -4,31 +4,34 @@
 
 {% block content %}
 <div class="container mt-5 mb-5">
-    <h1 class="text-center mb-2" style="color:#a67c52; font-weight:700;">My Projects</h1>
-    <p class="text-center mb-5">A few things I've been building and learning from. Replace these with your own projects any time!</p>
 
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="{{ url_for('static', filename='images/project-code.jpg') }}" class="card-img-top" alt="Project screenshot">
-                <div class="card-body">
-                    <h5 class="card-title">Project One</h5>
-                    <p class="card-text">A short description of this project — what it does, the problem it solves, and the tech stack used to build it.</p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">View Project</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="{{ url_for('static', filename='images/project-dev.jpg') }}" class="card-img-top" alt="Project screenshot">
-                <div class="card-body">
-                    <h5 class="card-title">Project Two</h5>
-                    <p class="card-text">A short description of this project — what it does, the problem it solves, and the tech stack used to build it.</p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">View Project</a>
-                </div>
-            </div>
-        </div>
+    <h1 class="text-center mb-2"> My Projects </h1>
+
+    <p class="text-center mb-5"> A collection of projects I've worked, and contributed on and I continue to improve.</p>
+    <div class="project-list">
+
+    <div class="project-item">
+        <span>Rock, Paper, Scissors</span>
+        <a href="https://github.com/lelonkala/JavaGame_RockPaperScissors">
+        <i class="fas fa-eye"></i></a>
+
     </div>
+
+    <div class="project-item">
+    <span>Finanacial calculator</span>
+    <a href="https://github.com/lelonkala/Financial_Calculator">
+    <i class="fas fa-eye"></i>
+    </a>
+
+</div>
+
+<div class="project-item">
+    <span>Doctor's appointment system</span>
+    <a href="https://github.com/5asitgroup/Full-Stack-Doctor-System">
+        <i class="fas fa-eye"></i>
+    </a>
+</div>
+</div>
 </div>
 {% endblock %}
 

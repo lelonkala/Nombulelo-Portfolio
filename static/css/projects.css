@@ -1,0 +1,25 @@
+.h1 {
+    color:#f153c2; 
+    font-weight: 700px;
+    text-align: center;
+}
+.project-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #f153c2;
+}
+.project-item span {
+    font-size: 1rem;
+    font-weight: 500;
+
+}

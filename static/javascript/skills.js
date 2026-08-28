@@ -10,7 +10,7 @@ setInterval(() => {
     if(showingTechnical){
         technical.style.display = "none";
         soft.style.display = "block";
-        title.innerText = "Professional Skills";
+        title.innerText = "Soft Skills";
     }
     else{
         technical.style.display = "block";
