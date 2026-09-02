@@ -2,6 +2,7 @@
     color:#f153c2; 
     font-weight: 700px;
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .project-list {
     max-width: 800px;
@@ -32,10 +33,11 @@
     margin-bottom: 80px;
 }
 
-.certifications-section h2 {
+.certifications-section h1 {
     color: #f153c2;
     font-size: 2.5rem;
     margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .certifications-section p {
