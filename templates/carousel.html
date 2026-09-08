@@ -1,0 +1,105 @@
+<section class="certifications-section">
+
+    <h1>Achievements & Certifications</h1>
+
+    <p>
+        A collection of certifications showcasing my commitment to continuous
+        learning in Systems Engineering and Software Development.
+    </p>
+
+    <div class="carousel-wrapper">
+
+        <!-- Previous Button -->
+        <button class="carousel-btn prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- Carousel -->
+        <div class="certificate-carousel" id="certificateCarousel">
+
+            <div class="certificate-card">
+                <a href="{{ url_for('static', filename='Certificates/PAM CyberArk.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>CyberArk PAM</h3>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                  <a href="{{ url_for('static', filename='Certificates/Active Directory & Group Policy.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Active Directory & Group Policy</h3>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                  <a href="{{ url_for('static', filename='Certificates/SAN & NAS Storage.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Introduction to SAN & NAS Storage</h3>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                 <a href=" {{ url_for('static', filename='Certificates/Dell EMC.pdf') }}">
+                     <i class="fas fa-file-pdf"></i>
+                    <h3>Dell EMC</h3>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                <a href="{{ url_for('static', filename='Certificates/Windows Server Administration.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Windows Server 2022 Administration</h3>
+                </a>
+            </div>
+
+            <!-- Duplicate cards for infinite effect -->
+
+            <div class="certificate-card">
+                 <a href="{{ url_for('static', filename='Certificates/PAM CyberArk.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>CyberArk PAM</h3>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                  <a href="{{ url_for('static', filename='Certificates/PAM CyberArk.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Active Directory & Group Policy</h3>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                  <a href="{{ url_for('static', filename='Certificates/PAM CyberArk.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Introduction to SAN & NAS Storage</h3>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                  <a href="{{ url_for('static', filename='Certificates/PAM CyberArk.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Dell EMC</h3>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                 <a href="{{ url_for('static', filename='Certificates/Windows Server 2022 Administration.pdf') }}">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Windows Server 2022 Administration</h3>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Next Button -->
+        <button class="carousel-btn next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+    </div>
+    
+
+
+</section>
+
+<script src="{{ url_for('static', filename='javascript/carousel.js')}}"> </script>
