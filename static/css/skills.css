@@ -16,7 +16,6 @@
     font-weight: 700;
     margin-bottom: 1rem;
 }
-
 .skills-title {
     text-align: center;
     font-size: 1.3rem;
@@ -25,6 +24,7 @@
     margin-bottom: 2.5rem;
     position: relative;
 }
+
 .skills-title::after {
     content: "";
     width: 80px;
@@ -58,6 +58,19 @@
 
 .progress-bar {
     background: linear-gradient(90deg, #f153c2, #ff89db); 
+    height: 100%;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.75rem;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 12px;
+    transition: width 0.8s ease;
+    animation: fillbar 1.8s ease;
+}
+
+.progress-bar-tech {
+    background: linear-gradient(90deg, #24031a, #702b5b); 
     height: 100%;
     border-radius: 30px;
     color: white;

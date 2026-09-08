@@ -11,11 +11,13 @@ setInterval(() => {
         technical.style.display = "none";
         soft.style.display = "block";
         title.innerText = "Soft Skills";
+        title.style.color = "#ec4899";
     }
     else{
         technical.style.display = "block";
         soft.style.display = "none";
         title.innerText = "Technical Skills";
+        title.style.color = "#24031a";
     }
 
     showingTechnical = !showingTechnical;

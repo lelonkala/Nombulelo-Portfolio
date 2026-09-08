@@ -7,8 +7,9 @@
 .certifications-section h1 {
     color: #f153c2;
     font-size: 2.5rem;
+    font-weight: 600;
     margin-bottom: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 .certifications-section p {

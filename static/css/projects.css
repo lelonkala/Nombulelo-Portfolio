@@ -1,8 +1,9 @@
 .myProjects h1 {
-    color:#f153c2; 
+    color:#ec4899; 
     font-weight: 700px;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
 }
 .project-list {
     max-width: 800px;
