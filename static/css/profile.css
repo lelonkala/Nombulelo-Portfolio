@@ -64,14 +64,17 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
-.form-wrapper .btn-primary {
+.form-wrapper a {
     background-color: #eb79c5;
     border-color: #eb79c5;
 }
+.form-wrapper i{
+    color: green;
+}
 
-.form-wrapper .btn-primary:hover {
-    background-color: #eb79c5;
-    border-color: #eb79c5;
+.form-wrapper a:hover {
+    background-color: #e5afd3;
+    border-color: #e5afd3;
 }
 
 /* Footer */

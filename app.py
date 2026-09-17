@@ -3,24 +3,18 @@ from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
 
-#print(os.getenv("MAIL_USERNAME"))
-load_dotenv()
 
 
 app = Flask(__name__)
 app.secret_key = "change-this-secret-key"  # needed for flash messages
 
-# Flask-Mail Configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-mail = Mail(app)
 
 @app.route("/")
 def home():
-    return render_template("MyProfile.html")
+    whatsapp_number = os.getenv("WHATSAPP_NUMBER")
+    return render_template(
+        "MyProfile.html",
+        whatsapp_number=whatsapp_number)
 
 
 @app.route("/about")
