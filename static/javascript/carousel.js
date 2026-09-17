@@ -1,58 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
+function scrollToCard(direction) {
 
-    const carousel = document.getElementById("certificateCarousel");
-    const nextBtn = document.getElementById("nextBtn");
-    const prevBtn = document.getElementById("prevBtn");
+    const cards = document.querySelectorAll(".certificate-card");
 
-    if (!carousel ) {
-        console.error("Carousel elements not found.");
-        return;
-    }
-    if(!prevBtn){
-        console.error("Previous button not found.");
-        return;
-    }
-    if(!nextBtn){
-        console.error("Next Button not found");
-        return;
-    }
-    function updateButtons(){
-        const maxScroll =  carousel.scrollWidth - carousel.parentElement.offsetWidth;
+    let centerIndex = 0;
 
-        prevBtn.disabled = currentPosition >= 0;
-        nextBtn.disabled = Math.abs(currentPosition) >= maxScroll;
-    }
+    cards.forEach((card, index) => {
 
-    let currentPosition = 0;
+        const rect = card.getBoundingClientRect();
+        const center = window.innerWidth / 2;
 
-    nextBtn.addEventListener("click", function() {
-
-        carousel.style.animationPlayState = "paused";
-        const maxScroll = carousel.scrollWidth - carousel.parentElement.offsetWidth;
-        if (Math.abs(currentPosition) < maxScroll){
-            currentPosition -= 300;
-
-             carousel.style.transform =
-            "translateX("  + currentPosition + "px)";
+        if (
+            rect.left < center &&
+            rect.right > center
+        ) {
+            centerIndex = index;
         }
-
-        updateButtons();
     });
 
-    prevBtn.addEventListener("click", function() {
+    let newIndex = centerIndex + direction;
 
-        
-        carousel.style.animationPlayState = "paused";
-        if (currentPosition < 0 ){
-            currentPosition += 300;
+    if (newIndex < 0) {
+        newIndex = cards.length - 1;
+    }
 
-            carousel.style.transform =
-            "translateX(" + currentPosition + "px)";
+    if (newIndex >= cards.length) {
+        newIndex = 0;
+    }
 
-        }
-
-       updateButtons();
-
+    cards[newIndex].scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest"
     });
+}
 
+nextBtn.addEventListener("click", () => {
+    scrollToCard(1);
+});
+
+prevBtn.addEventListener("click", () => {
+    scrollToCard(-1);
 });

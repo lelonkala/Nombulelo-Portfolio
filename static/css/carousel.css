@@ -27,12 +27,14 @@
 .certificate-carousel {
     display: flex;
     gap: 20px;
-    width: max-content;
-    cursor: grab;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+   justify-content: flex-start;
+   padding: 0 ;
+   align-items: flex-end;
+   scroll-behavior: smooth;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
 }
 .certificate-carousel::-webkit-scrollbar{
     display:none;
@@ -73,21 +75,32 @@
 
 
 .certificate-card {
-    flex: 0 0 280px;
-    min-height: 230px;
-
+    flex: 0 0 300px;
+    width: 300px;
+    min-width:280px;
+    max-width: 280px;
+    height: 260px;
     background: white;
     border-radius: 24px;
-
-    padding: 25px;
-
     display: flex;
+    scroll-snap-align: center;
     justify-content: center;
-    align-items: center;
-
+    text-align: center;
+    border-radius: 24px;
+    padding: 25px;
+    box-sizing: border-box;
     box-shadow: 0 6px 25px rgba(241,83,194,0.2);
 
     transition: all 0.4s ease;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translayeY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
 }
 .carousel-btn:hover{
   
@@ -97,6 +110,7 @@
     
 
 }
+
 .carousel-btn i {
     font-size: 2rem;
     width: fit-content;
@@ -121,6 +135,7 @@
 .certificate-card a {
     text-decoration: none;
     color: inherit;
+     width: 100%;
 }
 
 .certificate-card i {
@@ -132,6 +147,11 @@
 .certificate-card h3 {
     font-size: 1rem;
     color: #333;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 .carousel-wrapper::before,
 .carousel-wrapper::after {
@@ -163,11 +183,30 @@
 }
 
 @media (max-width: 480px){
-
-    .certificate-card{
-        flex: 0 0 200px;
+    .carousel-wrapper{
+        overflow: hidden;
+        padding: 0 50px;
     }
 
+    .certificate-carousel {
+        justify-content: center;
+    }
+
+    .carousel-wrapper::before,
+    .carousel-wrapper::after{
+        display: none;
+    }
+    .certificate-card{
+        flex: 0 0 100%;
+        min-width: 280px;
+        margin: 0 auto;
+    }
+    .carousel-btn.prev{
+        left: 5px;
+    }
+    .carousel-btn.next{
+        right: 5px;
+    }
     .certificate-card img{
         height: 140px;
     }
@@ -177,3 +216,11 @@
     }
 }
 
+@media (max-width: 768px){
+
+    .certificate-card{
+        flex: 0 0 calc(50% - 10px);
+        min-width: calc(50% -10%);
+    }
+
+}
