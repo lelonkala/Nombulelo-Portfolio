@@ -11,10 +11,9 @@ app.secret_key = "change-this-secret-key"  # needed for flash messages
 
 @app.route("/")
 def home():
-    whatsapp_number = os.getenv("WHATSAPP_NUMBER")
+    whatsapp_number = os.getenv("WHATSAPP_NUMBER")    
     return render_template(
-        "MyProfile.html",
-        whatsapp_number=whatsapp_number)
+        "MyProfile.html", whatsapp_number =whatsapp_number)
 
 
 @app.route("/about")
