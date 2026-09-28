@@ -26,9 +26,10 @@ def projects():
     return render_template("projects.html")
 
 
-@app.route("/contact")
-def contact():
-    return render_template("form.html")
+@app.route("/contact-whatsapp")
+def contact_whatsapp():
+    whatsapp_number = os.getenv("WHATSAPP_NUMBER")  
+    return redirect(f"https://wa.me/{whatsapp_number}")
 
 @app.route("/skills")
 def skills():
